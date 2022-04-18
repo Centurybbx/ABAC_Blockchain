@@ -1,0 +1,154 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "result",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "accessTime",
+						"type": "uint256"
+					}
+				],
+				"name": "AccessControlRet",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_objectAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					}
+				],
+				"name": "accessControl",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "res",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCurTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_MCAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_JCAddr",
+						"type": "address"
+					}
+				],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AccessControl.sol": "AccessControl"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AccessControl.sol": {
+			"keccak256": "0x86254702a99e60ab4e65e77500bc36dff86dbb61012fbedb059b8b7bcaade802",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ed5e6232be825a9faa868448557fa14ce0c5e04638c218f370cb891fdc3f71e9",
+				"dweb:/ipfs/QmapfrwxGfXQ7MWkEqP9gdbHCiqxaVaZPSV9tbrNEmKFSU"
+			]
+		},
+		"contracts/Judge.sol": {
+			"keccak256": "0x137b42c9ffe50c51e5badf974778517247ca5f1bbc5d811c5bb64b68f5aaa54d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2daa0d07c6b486db13360b2783af3e84110a75c04ea6507e5f5a795feca46793",
+				"dweb:/ipfs/QmdUzRPSnDYbw1BxeLdU573ACvwQpNT4t9h55Y32XrYu4Y"
+			]
+		},
+		"contracts/Management.sol": {
+			"keccak256": "0x3de280b7ff1b14b241e53dcd2c5cc324422bdbd310792e26a09fd154ca05489d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://892e5c410c38a6fe29a8c12465c2a8825a02df65178db52cf4367e8043b70f6e",
+				"dweb:/ipfs/QmXVRWex1AHiBxnPrbh4KkZvnTTskFB8Zwah5y8aex6r3o"
+			]
+		}
+	},
+	"version": 1
+}

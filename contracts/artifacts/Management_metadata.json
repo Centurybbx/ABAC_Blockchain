@@ -1,0 +1,248 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "getDeviceInfoByAddr",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "deviceAddr",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "deviceName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "deviceType",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Management.DeviceInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_subjectAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_objectAddr",
+						"type": "address"
+					}
+				],
+				"name": "getRight",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_subjectAddr",
+						"type": "address"
+					}
+				],
+				"name": "getSubjInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "subjName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipAddr",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_deviceAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "right",
+						"type": "string"
+					}
+				],
+				"name": "register4Right",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_deviceAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_deviceName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_deviceType",
+						"type": "string"
+					}
+				],
+				"name": "setDeviceInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_subjectName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ipAddr",
+						"type": "string"
+					}
+				],
+				"name": "setSubjInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "subjInfoMap",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "subjectAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "subjectName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipAddr",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_deviceAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "right",
+						"type": "string"
+					}
+				],
+				"name": "testRegister",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Management.sol": "Management"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Management.sol": {
+			"keccak256": "0x3de280b7ff1b14b241e53dcd2c5cc324422bdbd310792e26a09fd154ca05489d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://892e5c410c38a6fe29a8c12465c2a8825a02df65178db52cf4367e8043b70f6e",
+				"dweb:/ipfs/QmXVRWex1AHiBxnPrbh4KkZvnTTskFB8Zwah5y8aex6r3o"
+			]
+		}
+	},
+	"version": 1
+}
