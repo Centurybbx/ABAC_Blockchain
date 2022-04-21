@@ -31,6 +31,11 @@
 								"internalType": "string",
 								"name": "deviceType",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
 							}
 						],
 						"internalType": "struct Management.DeviceInfo",
@@ -130,6 +135,11 @@
 						"internalType": "string",
 						"name": "_deviceType",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_status",
+						"type": "string"
 					}
 				],
 				"name": "setDeviceInfo",
@@ -183,29 +193,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_sender",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_deviceAddr",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "right",
-						"type": "string"
-					}
-				],
-				"name": "testRegister",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -236,11 +223,11 @@
 	},
 	"sources": {
 		"contracts/Management.sol": {
-			"keccak256": "0x3de280b7ff1b14b241e53dcd2c5cc324422bdbd310792e26a09fd154ca05489d",
+			"keccak256": "0xc9607bb323cb15fa85e9459e77e114fb9daa2729927566d4ffd5d27985812125",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://892e5c410c38a6fe29a8c12465c2a8825a02df65178db52cf4367e8043b70f6e",
-				"dweb:/ipfs/QmXVRWex1AHiBxnPrbh4KkZvnTTskFB8Zwah5y8aex6r3o"
+				"bzz-raw://b400069060fe01d822a650f6e5fdf9fa8aa3b3a93f2451beea5e283027e795c6",
+				"dweb:/ipfs/QmZA7X72vgTuuaCAk1ptUERzYNNdavuR2JkiMhbSA7YHC8"
 			]
 		}
 	},

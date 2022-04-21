@@ -4,6 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 import "./Management.sol";
 import "./Judge.sol";
 
+
 contract AccessControl {
     
     Management manager;
@@ -30,7 +31,7 @@ contract AccessControl {
         manager = Management(_MCAddr);
         judge = Judge(_JCAddr);
 
-        // assign right degree, higher number equals higher right.
+        // assign right degree, higher number equals higher right.      TODO: add not found right
         rightTable["read"] = 1;
         rightTable["open"] = 2;
         rightTable["close"] = 2;
@@ -43,8 +44,9 @@ contract AccessControl {
     function checkRequesterStatus() private {
         if(requestMap[msg.sender].isRequested == true) {
             uint256 timeGap = block.timestamp - requestMap[msg.sender].ToLR;
-            // request time gap is 10 secs
-            if(timeGap <= 10) {
+            requestMap[msg.sender].ToLR = block.timestamp;
+            // request time gap is 6 secs
+            if(timeGap <= 6) {
                 // give illegal user penalty: block for 10 secs
                 judge.setBlackList(msg.sender);
             }
@@ -76,11 +78,18 @@ contract AccessControl {
         }
 
         string memory right = manager.getRight(msg.sender, _objectAddr);
-        // check subject's right 
-        if(rightTable[action] > rightTable[right]) {
-            emit AccessControlRet(msg.sender, _objectAddr, action, "Unauthorized access!", block.timestamp);
+        bool _isLegalAction = isLegalAction(action);
+        if(_isLegalAction) {
+            // check if the subject's action over authorization
+            if(rightTable[action] > rightTable[right]) {
+                emit AccessControlRet(msg.sender, _objectAddr, action, "Unauthorized access!", block.timestamp);
+                res = false;
+                return res;
+            }
+        } else {
+            emit AccessControlRet(msg.sender, _objectAddr, action, "Illegal action!", block.timestamp);
             res = false;
-            return res;
+            return false;
         }
 
         string memory subjName;
@@ -100,6 +109,10 @@ contract AccessControl {
     
     function getCurTime() public view returns(uint256) {
         return block.timestamp;
+    }
+
+    function isLegalAction(string memory _action) public view returns(bool res) {
+        return !(rightTable[_action] == 0);
     }
 
     // function getTimeOfLastRequest(address _sender) public view returns (uint256 time) {

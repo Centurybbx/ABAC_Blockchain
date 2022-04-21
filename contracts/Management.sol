@@ -7,6 +7,7 @@ contract Management {
         address deviceAddr;
         string deviceName;
         string deviceType;
+        string status;
     }
 
     struct SubjInfo {
@@ -22,10 +23,11 @@ contract Management {
 
     mapping(address => SubjInfo) public subjInfoMap;
 
-    function setDeviceInfo(address _deviceAddr, string memory _deviceName, string memory _deviceType) public {
+    function setDeviceInfo(address _deviceAddr, string memory _deviceName, string memory _deviceType, string memory _status) public {
         deviceInfoMap[_deviceAddr].deviceAddr = _deviceAddr;
         deviceInfoMap[_deviceAddr].deviceName = _deviceName;
         deviceInfoMap[_deviceAddr].deviceType = _deviceType;
+        deviceInfoMap[_deviceAddr].status = _status;
     }
 
     function setSubjInfo(string memory _subjectName, string memory _ipAddr) public {
@@ -62,21 +64,11 @@ contract Management {
         address device3;
         (device1, device2, device3) = (0xb4d18d483b641200Aa096558C9bA63aeb243002b, 
         0xfF5d2fe96548E05E49C67FcC36C7dBecA2f501f2, 0xbE7186f383961Cc24Ad8012A2F2942667a72788F);
-        setDeviceInfo(device1, "d1", "lightning");
-        setDeviceInfo(device2, "d2", "grid");
-        setDeviceInfo(device3, "d3", "router");
+        setDeviceInfo(device1, "d1", "Bulb", "on");
+        setDeviceInfo(device2, "d2", "Transformer", "off");
+        setDeviceInfo(device3, "d3", "Sensor", "on");
 
-        // subject info
-        address subj1;
-        address subj2;
-        address subj3;
-        (subj1, subj2, subj3) = (0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 
-        0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2, 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db);
 
-    }
-
-    function testRegister(address _sender, address _deviceAddr, string memory right) public {
-        subjInfoMap[_sender].rightTable[_deviceAddr] = right;
     }
 
 }

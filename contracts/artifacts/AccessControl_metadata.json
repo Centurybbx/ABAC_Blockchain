@@ -96,6 +96,25 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_action",
+						"type": "string"
+					}
+				],
+				"name": "isLegalAction",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "res",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -126,11 +145,11 @@
 	},
 	"sources": {
 		"contracts/AccessControl.sol": {
-			"keccak256": "0x86254702a99e60ab4e65e77500bc36dff86dbb61012fbedb059b8b7bcaade802",
+			"keccak256": "0xf2ba72076222dcd3e4cafc9528d728852f1fbe3058e153092ca7ad20c7998966",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ed5e6232be825a9faa868448557fa14ce0c5e04638c218f370cb891fdc3f71e9",
-				"dweb:/ipfs/QmapfrwxGfXQ7MWkEqP9gdbHCiqxaVaZPSV9tbrNEmKFSU"
+				"bzz-raw://4bbfbc97f7ce8193a166ce246ade80d439fad400718b399688c1a2aa407572b0",
+				"dweb:/ipfs/QmaHSPrUJNgWRjyftLtpTNgR4UnWvXFf58NoZWSMzipZAJ"
 			]
 		},
 		"contracts/Judge.sol": {
@@ -142,11 +161,11 @@
 			]
 		},
 		"contracts/Management.sol": {
-			"keccak256": "0x3de280b7ff1b14b241e53dcd2c5cc324422bdbd310792e26a09fd154ca05489d",
+			"keccak256": "0xc9607bb323cb15fa85e9459e77e114fb9daa2729927566d4ffd5d27985812125",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://892e5c410c38a6fe29a8c12465c2a8825a02df65178db52cf4367e8043b70f6e",
-				"dweb:/ipfs/QmXVRWex1AHiBxnPrbh4KkZvnTTskFB8Zwah5y8aex6r3o"
+				"bzz-raw://b400069060fe01d822a650f6e5fdf9fa8aa3b3a93f2451beea5e283027e795c6",
+				"dweb:/ipfs/QmZA7X72vgTuuaCAk1ptUERzYNNdavuR2JkiMhbSA7YHC8"
 			]
 		}
 	},
